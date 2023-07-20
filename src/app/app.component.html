@@ -294,9 +294,16 @@
   }
 </style>
 
-<app-header></app-header>
+<app-header  (headerSelected)="updateSelectedHeaderAndFetchContent($event)"></app-header>
 <div> 
   <h1 style="font-style: italic;" id="brrr" (click)="changeColor()">THis is great </h1>
+
+  <ng-container *ngIf="fetchedContent">
+    <p>{{ fetchedContent }}</p>
+  </ng-container>
+  <ng-container *ngIf="!fetchedContent">
+    <p>Loading content...</p>
+  </ng-container>
 </div>
 
 <router-outlet></router-outlet>

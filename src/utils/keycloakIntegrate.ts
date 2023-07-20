@@ -13,7 +13,7 @@ export function initializer(keycloak: KeycloakService): () => Promise<any> {
                 },
               loadUserProfileAtStartUp: false,
               initOptions: {
-                onLoad: 'login-required',
+                // onLoad: 'login-required',
                 checkLoginIframe: true
               },
               bearerExcludedUrls: []

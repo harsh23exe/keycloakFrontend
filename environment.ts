@@ -9,5 +9,6 @@ export const environment = {
       // The SPA's id. 
       // The SPA is registerd with this id at the auth-serverß
       clientId: 'login-app',
-    }
+    },
+    API: 'http://localhost:8081/test/'
   };

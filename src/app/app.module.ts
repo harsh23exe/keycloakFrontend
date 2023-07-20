@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { KeycloakService, KeycloakAngularModule } from 'keycloak-angular';
 import { initializer } from 'src/utils/keycloakIntegrate';
 import { HeaderComponent } from './header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    KeycloakAngularModule
+    KeycloakAngularModule,
+    HttpClientModule
   ],
   providers: [{
     provide: APP_INITIALIZER, 

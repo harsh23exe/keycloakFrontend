@@ -1,7 +1,12 @@
 <div class="header" style="background-color: aqua; padding: block 150px; height: 2cm;">
-    <div class="row">
-        <div class="card-container" style="border-color: blue; background-color: beige;">
-            <button (click)="logout()">LOGOUT</button>
+    <div layout="row">
+       
+        <div button (click)="selectHeader('anonymous')"> ANONYMOUS </div>
+        <div flex="30" (click)="selectHeader('user')"> USER </div>
+        
+        <div class="card" style="border-color: blue; background-color: beige;">
+            <button *ngIf="!checklogged()" (click)="login()">Login</button>
+            <button *ngIf="checklogged()" (click)="logout()">Logout</button>
         </div>
     </div>
 </div>
